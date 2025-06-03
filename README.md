@@ -1,4 +1,4 @@
-# Sentiment Classification with RAG and Ollama (Gemma3)
+# Sentiment Classification with RAG using Gemma3 (Ollama)
 
 This project implements sentiment classification for a movie review system using 
 a **Retrieval-Augmented Generation (RAG)** approach. It combines semantic embeddings, vector search with FAISS, and language generation using the `gemma3` model served via **Ollama**.
