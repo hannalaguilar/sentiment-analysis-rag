@@ -103,7 +103,7 @@ Below are sample outputs from both the FastAPI endpoint and the Gradio user inte
 
 ### FastAPI Response Example
 
-![FastAPI Output](assets/fastapi.png)
+<img src="assets/fastapi.png" alt="app_b2" width="100%" />
 
 This is an example of the JSON response returned by the `/classify` endpoint.
 
@@ -111,6 +111,7 @@ This is an example of the JSON response returned by the `/classify` endpoint.
 
 ### Gradio Interface Example
 
-![Gradio UI](assets/gradio_app.png)
+<img src="assets/gradio_app.png" alt="app_b2" height="100%" />
+
 
 This screenshot shows the Gradio web interface where users can input movie reviews and receive predictions along with similar retrieved reviews using RAG.
