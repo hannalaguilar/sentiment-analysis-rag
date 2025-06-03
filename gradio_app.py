@@ -28,7 +28,8 @@ def gradio_predict(review_text: str):
         return "Error", str(e)
 
 with gr.Blocks() as demo:
-    gr.Markdown("## Sentiment Classifier using Gemma3")
+    gr.Image("assets/gemma3.png", width=60, show_label=False, container=False)
+    gr.Markdown("## Sentiment Classifier for movie reviews using Gemma3 🎬 ⚡")
     with gr.Row():
         with gr.Column():
             review_input = gr.Textbox(label="Write your movie review", lines=6, placeholder="e.g. I loved the film...")

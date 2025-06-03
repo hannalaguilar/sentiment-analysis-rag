@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Wait for Ollama
-echo "⏳ Waiting for Ollama to be ready..."
+echo "Waiting for Ollama to be ready..."
 ollama serve &
 sleep 10
 
