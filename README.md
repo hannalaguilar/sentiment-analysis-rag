@@ -1,6 +1,6 @@
 # Sentiment Classification with RAG and Ollama (Gemma3)
 
-This project implements a sentiment classification for movie's review system using 
+This project implements sentiment classification for a movie review system using 
 a **Retrieval-Augmented Generation (RAG)** approach. It combines semantic embeddings, vector search with FAISS, and language generation using the `gemma3` model served via **Ollama**.
 
 
@@ -85,7 +85,7 @@ docker compose up --build
 - Gradio UI: http://localhost:7860
 - FastAPI Swagger docs: http://localhost:8000/docs
 
-### 3. Manage de container
+### 3. Manage the container
 ```bash
 # Stop the containers
 docker compose down  
@@ -97,10 +97,20 @@ docker compose up -build
 docker compose up -d
 ```
 
-#### If Ollama is running locally, make sure to stop it first
+## 🖼️ Examples of Outputs
 
-If you have Ollama installed and running on your local machine, stop it before running the Docker version to avoid port conflicts:
+Below are sample outputs from both the FastAPI endpoint and the Gradio user interface.
 
-```bash
-sudo systemctl stop ollama.service
-```
+### ⚙️ FastAPI Response Example
+
+![FastAPI Output](assets/fastapi.png)
+
+This is an example of the JSON response returned by the `/classify` endpoint.
+
+---
+
+### 🎨 Gradio Interface Example
+
+![Gradio UI](assets/gradio_app.png)
+
+This screenshot shows the Gradio web interface where users can input movie reviews and receive predictions along with similar retrieved reviews using RAG.
