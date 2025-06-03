@@ -81,7 +81,8 @@ def classify_rag_faiss(review: str, llm_model: str = 'gemma3', verbose: bool = T
                                 {"role": "system", "content": "You are a helpful assistant for sentiment classification."},
                                 {"role": "user", "content": prompt}
 
-                            ]
+                            ],
+                            options = {"temperature": 0}
                         )
 
     answer = response['message']['content'].strip().lower()
@@ -110,11 +111,11 @@ if __name__ == '__main__':
 
 
 
-# TARGET_NAMES = ['negative', 'positive']
-# print(f'Test results using {model_name}\n')
-# t0 = time.time()
-# output = [classify_rag_faiss(review) for review in test_df['text']]
-# elapsed_time = time.time() - t0
-# average_time = elapsed_time / test_df.shape[0]
-# print(f'Average inference time per sample: {average_time:.4f} seconds\n')
-# print(classification_report(test_df['label'].values, [map_label2int(result) for result in output], target_names=TARGET_NAMES))
+    # TARGET_NAMES = ['negative', 'positive']
+    # print(f'Test results using {MODEL_NAME}\n')
+    # t0 = time.time()
+    # output = [classify_rag_faiss(review) for review in test_df['text']]
+    # elapsed_time = time.time() - t0
+    # average_time = elapsed_time / test_df.shape[0]
+    # print(f'Average inference time per sample: {average_time:.4f} seconds\n')
+    # print(classification_report(test_df['label'].values, [map_label2int(result['sentiment']) for result in output], target_names=TARGET_NAMES))
