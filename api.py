@@ -5,7 +5,7 @@ from pydantic import BaseModel
 from sentiment_llm import classify_rag_faiss
 
 # FastAPI app
-app = FastAPI()
+app = FastAPI(title='Sentiment Analysis API', description='This is a API for serve a LLM model', version='0.0.1')
 
 # Schemas
 class ReviewRequest(BaseModel):
