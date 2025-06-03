@@ -1,4 +1,5 @@
 from typing import Dict, Union, List, Tuple
+import os
 import time
 import pandas as pd
 import numpy as np
@@ -10,13 +11,23 @@ from datasets import load_dataset
 from sklearn.metrics import classification_report
 
 
-
 def map_label2str(label: int) -> str:
   return 'positive' if label == 1 else 'negative'
 
 
 def map_label2int(label: str) -> int:
   return 1 if label == 'positive' else 0
+
+
+# Generate embeddings RUN ONLY ONCE
+# embedder = SentenceTransformer('intfloat/e5-large-v2')
+# corpus_embeddings = embedder.encode(train_df['text'].tolist(), normalize_embeddings=True)
+# index = faiss.IndexFlatIP(corpus_embeddings.shape[1])
+# index.add(corpus_embeddings)
+# os.makedirs("rag_index", exist_ok=True)
+# np.save("rag_index/embeddings.npy", corpus_embeddings)
+# train_df.to_csv("rag_index/metadata.csv", index=False)
+# faiss.write_index(index, "rag_index/faiss_index.index")
 
 
 embedder = SentenceTransformer('intfloat/e5-large-v2')
