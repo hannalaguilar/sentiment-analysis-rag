@@ -4,7 +4,7 @@ This project implements sentiment classification for a movie review system using
 a **Retrieval-Augmented Generation (RAG)** approach. It combines semantic embeddings, vector search with FAISS, and language generation using the `gemma3` model served via **Ollama**.
 
 
-## ⚙Technologies Used
+## Technologies Used
 
 - **RAG (Retrieval-Augmented Generation)**  
   Enhances LLM outputs by providing relevant context from a vector store.
@@ -97,11 +97,11 @@ docker compose up -build
 docker compose up -d
 ```
 
-## 🖼️ Examples of Outputs
+## Examples of Outputs
 
 Below are sample outputs from both the FastAPI endpoint and the Gradio user interface.
 
-### ⚙️ FastAPI Response Example
+### FastAPI Response Example
 
 ![FastAPI Output](assets/fastapi.png)
 
@@ -109,7 +109,7 @@ This is an example of the JSON response returned by the `/classify` endpoint.
 
 ---
 
-### 🎨 Gradio Interface Example
+### Gradio Interface Example
 
 ![Gradio UI](assets/gradio_app.png)
 
